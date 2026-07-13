@@ -69,3 +69,79 @@ const observer = new IntersectionObserver((entries)=>{
 document.querySelectorAll(".fade-up").forEach(item=>{
     observer.observe(item);
 });
+// ==========================
+// Экран приветствия
+// ==========================
+
+const welcomeScreen = document.getElementById("welcomeScreen");
+const guestInput = document.getElementById("guestName");
+const openButton = document.getElementById("openInvite");
+const guestGreeting = document.getElementById("guestGreeting");
+
+const placeholders = [
+    "Ваня и Маня",
+    "Мама и Папа",
+    "Лучший друг",
+    "Любимая тётя",
+    "Семья Ивановых"
+];
+
+let placeholderIndex = 0;
+
+if (guestInput) {
+
+    guestInput.placeholder = placeholders[0];
+
+    setInterval(() => {
+
+        placeholderIndex++;
+
+        if (placeholderIndex >= placeholders.length) {
+
+            placeholderIndex = 0;
+
+        }
+
+        guestInput.placeholder = placeholders[placeholderIndex];
+
+    }, 2200);
+
+}
+
+function openInvitation() {
+
+    let name = guestInput.value.trim();
+
+    if (name === "") {
+
+        name = "Дорогие гости";
+
+    }
+
+    guestGreeting.textContent = name + "!";
+
+    welcomeScreen.classList.add("hide");
+
+    document.body.style.overflow = "";
+
+    setTimeout(() => {
+
+        welcomeScreen.remove();
+
+    }, 700);
+
+}
+
+document.body.style.overflow = "hidden";
+
+openButton.addEventListener("click", openInvitation);
+
+guestInput.addEventListener("keydown", function(e){
+
+    if(e.key==="Enter"){
+
+        openInvitation();
+
+    }
+
+});
