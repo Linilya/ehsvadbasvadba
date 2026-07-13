@@ -2174,28 +2174,26 @@ body{
         font-size:36px;
 
     }
-.guestGreeting{
+.guestGreeting {
+    font-family: "Cormorant Garamond", serif;
 
-    font-family:"Cormorant Garamond",serif;
+    font-size: 76px;      /* было 58px */
 
-    font-size:58px;
+    font-weight: 600;
 
-    font-weight:600;
+    color: #6b4a3a;
 
-    color:#6b4a3a;
+    text-align: center;
 
-    text-align:center;
+    margin: 35px 0 18px;  /* было 0 0 12px */
 
-    margin:0 0 12px;
+    line-height: 1.1;
 
-    line-height:1.1;
+    opacity: 0;
 
-    opacity:0;
+    transform: translateY(15px);
 
-    transform:translateY(15px);
-
-    animation:guestAppear .8s ease forwards;
-
+    animation: guestAppear .8s ease forwards;
 }
     .intro{
 
