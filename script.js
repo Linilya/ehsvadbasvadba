@@ -1,4 +1,3 @@
-alert("script работает");
 // Дата свадьбы
 const weddingDate = new Date("September 25, 2026 14:00:00").getTime();
 
