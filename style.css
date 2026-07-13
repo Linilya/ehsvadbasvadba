@@ -692,7 +692,8 @@ color:#65574d;
 .leaves{
 
     position:fixed;
-
+top:0;
+left:0;
     inset:0;
 
     overflow:hidden;
