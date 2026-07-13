@@ -1459,40 +1459,41 @@ body{
     z-index:9999;
 }
 
-#musicBtn{
-    width:58px;
-    height:58px;
-    border:none;
-    border-radius:50%;
-    background:rgba(255,255,255,.85);
-    backdrop-filter:blur(10px);
-    cursor:pointer;
-    font-size:26px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-    transition:.3s;
-}
-
-#musicBtn:hover{
-    transform:scale(1.08);
-}
-
-#musicBtn.playing{
-    animation:spin 5s linear infinite;
-}
-
-@keyframes spin{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
-}
 #musicBtn {
-    background: transparent;
+    width: 58px;
+    height: 58px;
     border: none;
-    padding: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(10px);
     cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+#musicBtn:hover {
+    transform: scale(1.08);
+}
+
+#musicBtn.playing {
+    animation: spin 5s linear infinite;
 }
 
 #musicBtn img {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     display: block;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
