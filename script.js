@@ -146,6 +146,10 @@ guestInput.addEventListener("keydown", function(e){
 
 });
 const music = document.getElementById("bgMusic");
+console.log("Музыка:", music);
+
+music.onloadeddata = () => console.log("MP3 загружен");
+music.onerror = () => console.log("Ошибка загрузки MP3");
 const musicBtn = document.getElementById("musicBtn");
 
 musicBtn.addEventListener("click", async () => {
