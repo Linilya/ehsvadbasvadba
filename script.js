@@ -148,22 +148,22 @@ guestInput.addEventListener("keydown", function(e){
 const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
 
-if (music && musicBtn) {
+musicBtn.addEventListener("click", async () => {
 
-    let isPlaying = false;
+    if (music.paused) {
 
-    musicBtn.addEventListener("click", () => {
-
-        if (!isPlaying) {
-            music.play();
-            isPlaying = true;
+        try {
+            await music.play();
             musicBtn.classList.add("playing");
-        } else {
-            music.pause();
-            isPlaying = false;
-            musicBtn.classList.remove("playing");
+        } catch (e) {
+            console.error(e);
         }
 
-    });
+    } else {
 
-}
+        music.pause();
+        musicBtn.classList.remove("playing");
+
+    }
+
+});
