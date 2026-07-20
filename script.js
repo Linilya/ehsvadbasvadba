@@ -148,14 +148,28 @@ guestInput.addEventListener("keydown", function(e){
 const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
 
-musicBtn.addEventListener("click", () => {
+#musicBtn{
+    width:58px;
+    height:58px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:.3s ease;
+}
 
-    if (music.paused) {
-        music.play();
-        musicBtn.classList.add("playing");
-    } else {
-        music.pause();
-        musicBtn.classList.remove("playing");
-    }
+#musicBtn:hover{
+    transform:scale(1.08);
+}
 
-});
+#musicBtn img{
+    width:24px;
+    height:24px;
+    display:block;
+    opacity:.75;
+}
