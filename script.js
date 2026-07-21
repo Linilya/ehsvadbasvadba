@@ -1,5 +1,5 @@
 // Дата свадьбы
-const weddingDate = new Date("September 25, 2026 14:00:00").getTime();
+const weddingDate = new Date("September 25, 2026 16:00:00").getTime();
 
 function updateTimer() {
 
